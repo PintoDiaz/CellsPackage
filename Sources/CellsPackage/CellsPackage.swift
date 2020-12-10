@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Cell: View {
+public struct Cell: View {
     var title: String
     var amount: String
     var invoiceNumber: String
