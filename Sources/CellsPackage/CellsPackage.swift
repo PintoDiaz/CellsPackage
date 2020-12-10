@@ -8,12 +8,21 @@
 import SwiftUI
 
 public struct Cell: View {
-    public var title: String
-    public var amount: String
-    public var invoiceNumber: String
-    public var reference: String
-    public var status: String
-    public var date: String
+    var title: String
+    var amount: String
+    var invoiceNumber: String
+    var reference: String
+    var status: String
+    var date: String
+
+    public init(title: String, amount: String, invoiceNumber: String, reference: String, status: String, date: String) {
+        self.title = title
+        self.amount = amount
+        self.invoiceNumber = invoiceNumber
+        self.reference = reference
+        self.status = status
+        self.date = date
+    }
 
     public var body: some View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 8, content: {
