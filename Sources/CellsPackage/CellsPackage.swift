@@ -8,14 +8,14 @@
 import SwiftUI
 
 public struct Cell: View {
-    var title: String
-    var amount: String
-    var invoiceNumber: String
-    var reference: String
-    var status: String
-    var date: String
+    public var title: String
+    public var amount: String
+    public var invoiceNumber: String
+    public var reference: String
+    public var status: String
+    public var date: String
 
-    var body: some View {
+    public var body: some View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 8, content: {
             HStack(alignment: .firstTextBaseline, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
                 Text(title)
