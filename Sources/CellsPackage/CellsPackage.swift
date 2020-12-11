@@ -25,7 +25,7 @@ public struct Cell: View {
     }
 
     public var body: some View {
-        VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 8, content: {
+        VStack(alignment: .center, spacing: 8, content: {
             HStack(alignment: .firstTextBaseline, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
                 Text(title)
                     .bold()
@@ -34,7 +34,7 @@ public struct Cell: View {
                 Text(amount)
             })
 
-            HStack(alignment: .firstTextBaseline, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
+            HStack(alignment: .firstTextBaseline, spacing: nil, content: {
                 Text(invoiceNumber)
                 Text(reference)
                     .font(.footnote)
@@ -43,7 +43,7 @@ public struct Cell: View {
                 Spacer()
             })
 
-            HStack(alignment: .firstTextBaseline, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
+            HStack(alignment: .firstTextBaseline, spacing: nil, content: {
                 Text(status)
                     .bold()
                 Spacer()
@@ -55,7 +55,6 @@ public struct Cell: View {
 }
 
 struct Cell_Previews: PreviewProvider {
-    static let localizations = Bundle.main.localizations.map(Locale.init).filter { $0.identifier != "base" }
     static let dynamicTypeSizes: [ContentSizeCategory] = [.extraSmall, .large, .extraExtraExtraLarge]
 
     static var previews: some View {
@@ -63,7 +62,7 @@ struct Cell_Previews: PreviewProvider {
             ForEach(dynamicTypeSizes, id: \.self) { sizeCategory in
                 Cell(
                     title: "Joakim Broden",
-                    amount: "5 Pounds",
+                    amount: "£5.25",
                     invoiceNumber: "SI-4",
                     reference: "Reference",
                     status: "Outstanding",
@@ -74,13 +73,14 @@ struct Cell_Previews: PreviewProvider {
 
             Cell(
                 title: "Christiane Nüsslein-Volhard",
-                amount: "10 euros",
+                amount: "19.95€",
                 invoiceNumber: "SI-440",
                 reference: "Dies ist ein Satz mit fünfzig Zeichen, der überläuft.",
                 status: "Hervorragend",
                 date: "Dec 10"
             ).background(Color(.systemBackground))
             .environment(\.colorScheme, .dark)
+            .previewDisplayName("German")
         }.previewLayout(.sizeThatFits)
     }
 }
