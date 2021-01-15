@@ -1,8 +1,8 @@
----
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: CellsPackage
+  description: Demo example of SPM distribution
   annotations:
     github.com/project-slug: PintoDiaz/CellsPackage
 spec:
