@@ -6,5 +6,6 @@ metadata:
   annotations:
     github.com/project-slug: PintoDiaz/CellsPackage
 spec:
-  type: other
-  lifecycle: unknown
+  type: Library
+  lifecycle: Production
+  owner: roger.pinto@sage.com
